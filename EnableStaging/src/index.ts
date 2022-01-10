@@ -1,0 +1,1 @@
+window["GLOBAL_ENV"]["RELEASE_CHANNEL"] = "staging";
