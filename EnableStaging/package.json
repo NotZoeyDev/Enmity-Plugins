@@ -19,6 +19,6 @@
     "rollup-plugin-esbuild": "^4.8.2"
   },
   "dependencies": {
-    "aliucord-api": "file:../../Aliucord-API"
+    "aliucord-api": "git+https://github.com/NotZoeyDev/Aliucord-API.git"
   }
 }
