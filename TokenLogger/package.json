@@ -1,8 +1,10 @@
 {
   "name": "token-logger",
-  "description": "Real token logger!!!",
+  "description": "Get an user's token (real)!",
   "version": "1.0.0",
-  "types": "src/index.d.ts",
+  "author": {
+    "name": "Zoey"
+  },
   "scripts": {
     "build": "rollup -c --configPlugin esbuild"
   },
