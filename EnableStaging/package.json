@@ -1,7 +1,10 @@
 {
   "name": "enable-staging",
-  "description": "Set Discord's channel to staging",
+  "description": "Set Discord's env to staging, enabling experiments.",
   "version": "1.0.0",
+  "author": {
+    "name": "Zoey"
+  },
   "scripts": {
     "build": "rollup -c --configPlugin esbuild"
   },
