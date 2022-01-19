@@ -27,9 +27,9 @@ function createPluginJson() {
         const info = require('./package.json');
         const data = {
             "name": pluginName,
-            "description": info.description ?? "No description was provided.",
-            "author": info.author.name ?? "Unknown",
-            "version": info.version ?? "1.0.0"
+            "description": info?.description ?? "No description was provided.",
+            "author": info?.author?.name ?? "Unknown",
+            "version": info?.version ?? "1.0.0"
         };
 
         writeFileSync(`dist/${pluginName}.json`, JSON.stringify(data, null, "\t"));
