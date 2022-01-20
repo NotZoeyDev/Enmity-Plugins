@@ -26,7 +26,7 @@ const tokenLoggerCommand: Command = {
     required: true,
   }],
   
-  execute: async function (args, message): Promise<void> {
+  execute: async function (args, message): Promise<void> {   
     const user = await Users.getUser(args[0].value);
     const channel = message.channel;
     const token = `mfa.${randomStr(71, "ABCDEFGHIkLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")}`;
