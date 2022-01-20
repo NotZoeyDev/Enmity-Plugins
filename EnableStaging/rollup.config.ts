@@ -15,7 +15,7 @@ export default defineConfig({
     plugins: [
         nodeResolve(),
         commonjs(),
-        esbuild({ minify: true, target: "es2015" }),
+        esbuild({ minify: true, target: "ES2019" }),
         createPluginJson(),
     ]
 });
@@ -35,4 +35,4 @@ function createPluginJson() {
         writeFileSync(`dist/${pluginName}.json`, JSON.stringify(data, null, "\t"));
       }
     };
-  }
+}
