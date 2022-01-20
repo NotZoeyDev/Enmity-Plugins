@@ -15,7 +15,7 @@ export default defineConfig({
     plugins: [
         nodeResolve(),
         commonjs(),
-        esbuild({ minify: true, target: "es2015" }),
+        esbuild({ minify: true, target: "ES2019" }),
         createPluginJson(),
     ]
 });
