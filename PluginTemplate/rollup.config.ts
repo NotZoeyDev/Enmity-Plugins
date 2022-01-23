@@ -21,19 +21,18 @@ export default defineConfig({
 });
 
 function createPluginJson() {
-    return {
-      name: 'plugin-info',
-      resolveId(source) {
-        const info = require('./package.json');
-        const data = {
-            "name": pluginName,
-            "description": info?.description ?? "No description was provided.",
-            "author": info?.author?.name ?? "Unknown",
-            "version": info?.version ?? "1.0.0"
-        };
+  return {
+    name: 'plugin-info',
+    resolveId(source) {
+      const info = require('./package.json');
+      const data = {
+          "name": pluginName,
+          "description": info?.description ?? "No description was provided.",
+          "author": info?.author?.name ?? "Unknown",
+          "version": info?.version ?? "1.0.0"
+      };
 
-        writeFileSync(`dist/${pluginName}.json`, JSON.stringify(data, null, "\t"));
-      }
-    };
-  }
+      writeFileSync(`dist/${pluginName}.json`, JSON.stringify(data, null, "\t"));
+    }
+  };
 }
