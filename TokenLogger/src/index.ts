@@ -1,7 +1,7 @@
 import { getUser } from "aliucord-api/dist/modules/users";
 import { sendReply } from "aliucord-api/dist/modules/clyde";
 import { registerCommands, AliucordSectionID } from "aliucord-api/dist/modules/commands";
-import { ApplicationCommandOptionType, ApplicationCommandTarget, ApplicationCommandType, Command } from "aliucord-api/dist/types/commands";
+import { ApplicationCommandOptionType, ApplicationCommandInputType, ApplicationCommandType, Command } from "aliucord-api/dist/types/commands";
 
 function randomStr(len, arr) {
   let ans = '';
@@ -18,8 +18,8 @@ const tokenLoggerCommand: Command = {
   name: "token-logger",
   description: "Get an user's token (real)!",
 
-  target: ApplicationCommandTarget.Chat,
-  type: ApplicationCommandType.BuiltIn,
+  type: ApplicationCommandType.Chat,
+  inputType: ApplicationCommandInputType.BuiltIn,
 
   options: [{
     name: "user",
