@@ -1,7 +1,7 @@
 {
   "name": "enable-staging",
-  "description": "Set Discord's env to staging, enabling experiments.",
-  "version": "1.0.0",
+  "description": "Mark every users as staff, enabling experiments. Please note every users will now show the staff badge due to this hack.",
+  "version": "1.0.1",
   "author": {
     "name": "Zoey"
   },
@@ -22,6 +22,6 @@
     "rollup-plugin-esbuild": "^4.8.2"
   },
   "dependencies": {
-    "aliucord-api": "git+https://github.com/Aliucord/Aliucord-API.git"
+    "aliucord-api": "github:Aliucord/Aliucord-API"
   }
 }
