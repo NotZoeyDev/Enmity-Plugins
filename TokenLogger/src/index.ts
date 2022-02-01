@@ -37,6 +37,6 @@ const tokenLoggerCommand: Command = {
   }
 }
 
-registerCommands([
+registerCommands("TokenLogger", [
   tokenLoggerCommand
 ]);
