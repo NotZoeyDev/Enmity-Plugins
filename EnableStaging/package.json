@@ -1,7 +1,7 @@
 {
   "name": "enable-staging",
   "description": "Mark every users as staff, enabling experiments. Please note every users will now show the staff badge due to this hack.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": {
     "name": "Zoey"
   },
