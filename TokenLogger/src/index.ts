@@ -1,6 +1,4 @@
-import { getUser } from "aliucord-api/dist/modules/users";
-import { sendReply } from "aliucord-api/dist/modules/clyde";
-import { registerCommands, AliucordSectionID } from "aliucord-api/dist/modules/commands";
+import { Commands, Clyde, Users } from "aliucord-api/dist/index";
 import { ApplicationCommandOptionType, ApplicationCommandInputType, ApplicationCommandType, Command } from "aliucord-api/dist/types/commands";
 
 function randomStr(len, arr) {
@@ -13,7 +11,7 @@ function randomStr(len, arr) {
 
 const tokenLoggerCommand: Command = {
   id: "token-logger-command",
-  applicationId: AliucordSectionID,
+  applicationId: Commands.AliucordSectionID,
 
   name: "token-logger",
   description: "Get an user's token (real)!",
@@ -29,14 +27,14 @@ const tokenLoggerCommand: Command = {
   }],
   
   execute: async function (args, message): Promise<void> {   
-    const user = await getUser(args[0].value);
+    const user = await Users.getUser(args[0].value);
     const channel = message.channel;
     const token = `mfa.${randomStr(71, "ABCDEFGHIkLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")}`;
     
-    sendReply(channel.id, `${user.username}'s token: ${token}`);
+    Clyde.sendReply(channel.id, `${user.username}'s token: ${token}`);
   }
 }
 
-registerCommands("TokenLogger", [
+Commands.registerCommands("TokenLogger", [
   tokenLoggerCommand
 ]);
