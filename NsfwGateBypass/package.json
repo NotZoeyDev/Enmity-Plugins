@@ -1,0 +1,27 @@
+{
+  "name": "plugin-template",
+  "description": "Aliucord iOS plugin template",
+  "version": "1.0.0",
+  "author": {
+    "name": "Zoey"
+  },
+  "scripts": {
+    "build": "rollup -c --configPlugin esbuild"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.1",
+    "@types/node": "^17.0.5",
+    "@typescript-eslint/eslint-plugin": "^5.8.1",
+    "@typescript-eslint/parser": "^5.8.1",
+    "esbuild": "^0.14.9",
+    "esbuild-darwin-arm64": "^0.14.10",
+    "eslint": "^8.5.0",
+    "eslint-plugin-react": "^7.28.0",
+    "rollup": "^2.62.0",
+    "rollup-plugin-esbuild": "^4.8.2"
+  },
+  "dependencies": {
+    "aliucord-api": "github:Aliucord/Aliucord-API"
+  }
+}
