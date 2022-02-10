@@ -14,12 +14,17 @@
     "@typescript-eslint/eslint-plugin": "^5.8.1",
     "@typescript-eslint/parser": "^5.8.1",
     "esbuild": "^0.14.9",
-    "esbuild-darwin-arm64": "^0.14.10",
     "eslint": "^8.5.0",
     "eslint-plugin-react": "^7.28.0",
     "rollup": "^2.62.0",
     "rollup-plugin-cjs-es": "^1.0.1",
     "rollup-plugin-esbuild": "^4.8.2"
+  },
+  "optionalDependencies": {
+    "esbuild-darwin-arm64": "^0.14.21",
+    "esbuild-darwin-64": "^0.14.21",
+    "esbuild-linux-64": "^0.14.21",
+    "esbuild-windows-64": "^0.14.21"
   },
   "dependencies": {
     "aliucord-api": "github:Aliucord/Aliucord-API"
