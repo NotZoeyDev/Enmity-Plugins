@@ -1,6 +1,6 @@
 {
-  "name": "plugin-template",
-  "description": "Aliucord iOS plugin template",
+  "name": "nsfw-gate-bypass",
+  "description": "Bypass the NSFW age gate.",
   "version": "1.0.0",
   "author": {
     "name": "Zoey"
