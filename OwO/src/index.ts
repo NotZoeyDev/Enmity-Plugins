@@ -1,4 +1,5 @@
-import { AliucordSectionID, registerCommands } from "aliucord-api/dist/modules/commands";
+import { Commands } from "aliucord-api";
+
 import { ApplicationCommandInputType, ApplicationCommandOptionType, ApplicationCommandType, Argument, Command } from "aliucord-api/dist/types/commands";
 import { Message } from "aliucord-api/dist/types/common";
 import owofire from "owofire";
@@ -6,7 +7,7 @@ import owofire from "owofire";
 
 const owo: Command = {
   id: "owo-command",
-  applicationId: AliucordSectionID,
+  applicationId: Commands.AliucordSectionID,
   name: "owo",
   description: "OwO What's this",
   type: ApplicationCommandType.Chat,
@@ -28,4 +29,4 @@ const owo: Command = {
   }
 }
 
-registerCommands("owo", [owo]);
+Commands.registerCommands("owo", [owo]);
