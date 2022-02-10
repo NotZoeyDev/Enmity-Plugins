@@ -1,6 +1,6 @@
 import { defineConfig } from "rollup";
 import { basename } from "path";
-import { writeFileSync } from "fs";
+import { writeFileSync, exists, mkdirSync } from "fs";
 import esbuild from "rollup-plugin-esbuild";
 import cjs from "rollup-plugin-cjs-es";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
@@ -21,18 +21,22 @@ export default defineConfig({
 });
 
 function createPluginJson() {
-    return {
-      name: 'plugin-info',
-      resolveId(source) {
-        const info = require('./package.json');
-        const data = {
-            "name": pluginName,
-            "description": info?.description ?? "No description was provided.",
-            "author": info?.author?.name ?? "Unknown",
-            "version": info?.version ?? "1.0.0"
-        };
+  return {
+    name: 'plugin-info',
+    resolveId(source) {
+      const info = require('./package.json');
+      const data = {
+          "name": pluginName,
+          "description": info?.description ?? "No description was provided.",
+          "author": info?.author?.name ?? "Unknown",
+          "version": info?.version ?? "1.0.0"
+      };
 
-        writeFileSync(`dist/${pluginName}.json`, JSON.stringify(data, null, "\t"));
+      if (!exists("dist")) {
+        mkdirSync("dist");
       }
-    };
+
+      writeFileSync(`dist/${pluginName}.json`, JSON.stringify(data, null, "\t"));
+    }
+  };
 }
