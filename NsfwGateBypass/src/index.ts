@@ -1,5 +1,5 @@
-import { getModuleByProps } from "aliucord-api/dist/modules/module";
-import { instead } from "aliucord-api/dist/modules/patcher";
+import { getModuleByProps } from "aliucord-api/module";
+import { instead } from "aliucord-api/patcher";
 
 const nsfwGateModule = getModuleByProps("isNSFWGuild");
 
