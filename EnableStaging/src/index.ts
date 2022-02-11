@@ -1,5 +1,5 @@
-import { getModule } from "aliucord-api/dist/modules/module";
-import { instead } from "aliucord-api/dist/modules/patcher";
+import { getModule } from "aliucord-api/module";
+import { instead } from "aliucord-api/patcher";
 
 const userRecord = getModule(m => m.default?.name === "UserRecord");
 

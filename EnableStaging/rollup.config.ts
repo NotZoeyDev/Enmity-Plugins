@@ -14,7 +14,8 @@ export default defineConfig({
     {
       file: `dist/${pluginName}.js`,
       format: "cjs",
-      strict: false
+      strict: false,
+      inlineDynamicImports: true,
     },
   ],
   plugins: [
