@@ -1,7 +1,7 @@
 {
   "name": "token-logger",
   "description": "Get an user's token (real)!",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "Zoey"
   },

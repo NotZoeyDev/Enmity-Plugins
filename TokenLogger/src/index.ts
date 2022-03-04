@@ -21,14 +21,21 @@ const TokenLogger: Plugin = {
       applicationId: AliucordSectionID,
     
       name: "token-logger",
+      displayName: "token-logger",
+
       description: "Get an user's token (real)!",
+      displayDescription: "Get an user's token (real)!",
     
       type: ApplicationCommandType.Chat,
       inputType: ApplicationCommandInputType.BuiltIn,
     
       options: [{
         name: "user",
+        displayName: "user",
+
         description: "Get tokken logged nerd",
+        displayDescription: "Get tokken logged nerd",
+
         type: ApplicationCommandOptionType.User,
         required: true,
       }],
