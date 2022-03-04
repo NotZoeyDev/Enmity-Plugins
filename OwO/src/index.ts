@@ -10,14 +10,23 @@ registerPlugin({
     const owo: Command = {
       id: "owo-command",
       applicationId: AliucordSectionID,
+
       name: "owo",
+      displayName: "owo",
+
       description: "OwO What's this",
+      displayDescription: "OwO What's this",
+      
       type: ApplicationCommandType.Chat,
       inputType: ApplicationCommandInputType.BuiltInText,
       
       options: [{
         name: "text",
-        description: "text to owoify",
+        displayName: "text",
+
+        description: "Text to owoify",
+        displayDescription: "Text to owoify",
+        
         type: ApplicationCommandOptionType.String,
         required: true
       }],
