@@ -1,6 +1,6 @@
-import { getModule } from "aliucord-api/module";
-import { instead } from "aliucord-api/patcher";
-import { registerPlugin } from "aliucord-api/plugins";
+import { getModule } from "enmity-api/module";
+import { instead } from "enmity-api/patcher";
+import { registerPlugin } from "enmity-api/plugins";
 
 const userRecord = getModule(m => m.default?.name === "UserRecord");
 
