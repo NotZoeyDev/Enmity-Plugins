@@ -1,5 +1,5 @@
-import { Command, AliucordSectionID, registerCommands, ApplicationCommandInputType, ApplicationCommandOptionType, ApplicationCommandType } from "aliucord-api/commands";
-import { registerPlugin } from "aliucord-api/plugins";
+import { Command, EnmitySectionID, registerCommands, ApplicationCommandInputType, ApplicationCommandOptionType, ApplicationCommandType } from "enmity-api/commands";
+import { registerPlugin } from "enmity-api/plugins";
 import owofire from "owofire";
 
 registerPlugin({
@@ -9,7 +9,7 @@ registerPlugin({
   onStart() {
     const owo: Command = {
       id: "owo-command",
-      applicationId: AliucordSectionID,
+      applicationId: EnmitySectionID,
 
       name: "owo",
       displayName: "owo",
