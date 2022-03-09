@@ -1,3 +1,3 @@
-# Aliucord-Plugins
+# Enmity-Plugins
 
-List of plugins I created for Aliucord iOS.
+List of plugins I created for Enmity.
