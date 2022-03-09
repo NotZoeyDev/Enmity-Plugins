@@ -1,7 +1,7 @@
-import { AliucordSectionID, Command, ApplicationCommandInputType, ApplicationCommandType, ApplicationCommandOptionType } from "aliucord-api/commands";
-import { sendReply } from "aliucord-api/clyde";
-import { getUser } from "aliucord-api/users";
-import { Plugin, registerPlugin } from "aliucord-api/plugins";
+import { EnmitySectionID, Command, ApplicationCommandInputType, ApplicationCommandType, ApplicationCommandOptionType } from "enmity-api/commands";
+import { sendReply } from "enmity-api/clyde";
+import { getUser } from "enmity-api/users";
+import { Plugin, registerPlugin } from "enmity-api/plugins";
 
 function randomStr(len, arr) {
   let ans = '';
@@ -18,7 +18,7 @@ const TokenLogger: Plugin = {
   onStart() {
     const tokenLoggerCommand: Command = {
       id: "token-logger-command",
-      applicationId: AliucordSectionID,
+      applicationId: EnmitySectionID,
     
       name: "token-logger",
       displayName: "token-logger",
