@@ -1,6 +1,6 @@
 {
-  "name": "plugin-template",
-  "description": "Enmity plugin template",
+  "name": "disable-sentry",
+  "description": "Disable sentry in Discord.",
   "version": "1.0.0",
   "author": {
     "name": "Zoey"
