@@ -28,7 +28,7 @@ export default defineConfig({
 function createPluginJson(options = {}): Plugin {
   return {
     name: 'plugin-info',
-    buildEnd: (err) => {
+    writeBundle: (err) => {
       const info = require('./package.json');
       const data = {
         "name": pluginName,
