@@ -1,6 +1,5 @@
 import { getModuleByProps } from "enmity-api/module";
 import { registerPlugin } from "enmity-api/plugins";
-import { instead } from "enmity-api/patcher";
 
 const User = getModuleByProps("isDeveloper");
 
