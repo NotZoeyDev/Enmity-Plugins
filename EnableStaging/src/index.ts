@@ -1,23 +1,25 @@
-import { getModule } from "enmity-api/module";
-import { instead } from "enmity-api/patcher";
+import { getModuleByProps } from "enmity-api/module";
 import { registerPlugin } from "enmity-api/plugins";
+import { instead } from "enmity-api/patcher";
 
-const userRecord = getModule(m => m.default?.name === "UserRecord");
+const User = getModuleByProps("isDeveloper");
 
 registerPlugin({
   name: "EnableStaging",
-  patches: [],
 
   onStart() {
-    const staffPatch = instead(this.name, userRecord.default.prototype, "hasFlag", (self, args, res) => {
-      if (args[0] === 1) return true
-      return res(args[0]);
+    Object.defineProperty(User.default, "isDeveloper", {
+        get: () => true,
+        set: () => {},
+        configurable:true
     });
-
-    this.patches.push(staffPatch);
   },
 
   onStop() {
-    this.patches = [];
+    Object.defineProperty(User.default, "isDeveloper", {
+        get: () => false,
+        set: () => {},
+        configurable:true
+    });
   }
 });
