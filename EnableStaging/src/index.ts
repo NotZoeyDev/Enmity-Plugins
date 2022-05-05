@@ -1,13 +1,13 @@
-import { getModuleByProps } from "enmity-api/module";
+import { getByProps } from "enmity-api/modules";
 import { registerPlugin } from "enmity-api/plugins";
 
-const User = getModuleByProps("isDeveloper");
+const User = getByProps("isDeveloper");
 
 registerPlugin({
   name: "EnableStaging",
 
   onStart() {
-    Object.defineProperty(User.default, "isDeveloper", {
+    Object.defineProperty(User, "isDeveloper", {
         get: () => true,
         set: () => {},
         configurable:true
@@ -15,7 +15,7 @@ registerPlugin({
   },
 
   onStop() {
-    Object.defineProperty(User.default, "isDeveloper", {
+    Object.defineProperty(User, "isDeveloper", {
         get: () => false,
         set: () => {},
         configurable:true

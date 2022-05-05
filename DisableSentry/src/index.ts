@@ -1,7 +1,7 @@
 import { Plugin, registerPlugin } from "enmity-api/plugins";
-import { getModuleByProps } from "enmity-api/module";
+import { getByProps } from "enmity-api/modules";
 
-const SentryMain = getModuleByProps('Status');
+const SentryMain = getByProps('Status');
 
 const DisableSentry: Plugin = {
   name: "DisableSentry",

@@ -1,8 +1,8 @@
 import { Plugin, registerPlugin } from "enmity-api/plugins";
-import { getModule } from "enmity-api/module";
+import { getByProps } from "enmity-api/modules";
 import { create } from "enmity-api/patcher";
 
-const typingModule = getModule(m => m.default?.startTyping);
+const typingModule = getByProps('startTyping');
 
 const SilentTyping: Plugin = {
   name: "SilentTyping",
@@ -11,11 +11,11 @@ const SilentTyping: Plugin = {
   onStart() {
     const TypingPatcher = create("silent-typing");
 
-    TypingPatcher.instead(typingModule.default, "startTyping", (self, args, res) => {
+    TypingPatcher.instead(typingModule, "startTyping", (self, args, res) => {
       return;
     });
 
-    TypingPatcher.instead(typingModule.default, "stopTyping", (self, args, res) => {
+    TypingPatcher.instead(typingModule, "stopTyping", (self, args, res) => {
       return;
     });
 
